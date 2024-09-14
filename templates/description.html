@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>description</title>
+    <style>
+        .card{
+            width: 90%;
+            margin: auto;
+            margin-top: 5%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .btn{
+            width: 35%;
+            padding: 5px;
+            margin-top: 2%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="..." alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Name : {{item_data[1]}}</h5>
+              <h5 class="card-title">ItemId : {{item_data[0]}}</h5>
+              <h5 class="card-title">Description : {{item_data[2]}}</h5>
+              <h5 class="card-title">Category : {{item_data[4]}}</h5>
+              <h5 class="card-title">Price : {{item_data[3]}}</h5>
+              <h5 class="card-title">Available Stock : {{item_data[6]}}</h5>
+              
+              {% if session.get('useremail') %}
+              <a href="{{url_for('addreview')}}"><button type="button" class="btn btn-outline-primary">Add Review</button></a>
+              {% endif %}
+              <a href=""><button type="button" class="btn btn-outline-success">Add To Cart</button></a> <br>
+              <a href=""><button type="button" class="btn btn-outline-success">Read Review</button></a>
+              <a href=""><button type="button" class="btn btn-outline-primary">Back</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+  </body>
+</html>
